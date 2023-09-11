@@ -12,14 +12,16 @@ namespace csharp_biblioteca
         private string titolo;
         private int anno;
         private string settore;
+        private char scaffale;
         private string autore;
 
-        public Documento(string titolo, int anno, string settore, string autore)
+        public Documento(string titolo, int anno, string settore, char scaffale, string autore)
         {
             SetCodice();
             SetTitolo(titolo);
             SetAnno(anno);
             SetSettore(settore);
+            SetScaffale(scaffale);
             SetAutore(autore);
         }
 
@@ -51,6 +53,11 @@ namespace csharp_biblioteca
             this.settore = settore;
         }
 
+        public void SetScaffale(char scaffale)
+        {
+            this.scaffale = scaffale;
+        }
+
         public void SetAutore(string autore)
         {
             this.autore = autore;
@@ -76,6 +83,11 @@ namespace csharp_biblioteca
         public string GetSettore()
         {
             return this.settore;
+        }
+
+        public char GetScaffale()
+        {
+            return this.scaffale;
         }
 
         public string GetAutore()
