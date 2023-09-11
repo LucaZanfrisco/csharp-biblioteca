@@ -21,7 +21,8 @@ namespace csharp_biblioteca
         public override void StampaDocumento()
         {
             base.StampaDocumento();
-            Console.WriteLine($"Pagine: {this.Pagine}");
+            Console.WriteLine($"Pagine: {this.Pagine}" +
+                $"\n----------------------\n");
         }
 
     }

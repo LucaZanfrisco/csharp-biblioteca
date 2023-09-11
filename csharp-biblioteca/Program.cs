@@ -48,9 +48,9 @@ biblioteca.AddUtente(utente2);
 biblioteca.AddUtente(utente3);
 biblioteca.AddUtente(utente4);
 
-biblioteca.AddPrestito("nome1", "cognome1", 40, theWitcher);
-
 biblioteca.StampaListaUtenti();
+
+biblioteca.AddPrestito("nome1", "cognome1", 40, theWitcher);
 
 Console.WriteLine("Inserire nome da cercare nella lista prestiti: ");
 string nomePrestito = Console.ReadLine();
@@ -69,4 +69,6 @@ else
     Console.WriteLine("Nessun Prestito Trovato");
 }
 
+Documento documetoCercato =  biblioteca.CercaDocumento(theWitcher.GetCodice(), "Pippo");
 
+documetoCercato.StampaDocumento();
