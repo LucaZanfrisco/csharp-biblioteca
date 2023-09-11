@@ -22,5 +22,13 @@ namespace csharp_biblioteca
             this.DataFine = dataFine;
             this.documento = documento;
         }
+
+        public void StampaPrestito()
+        {
+            Console.WriteLine($"Nome: {Nome}" +
+                $"\nCognome: {Cognome}" +
+                $"\nData Noleggio: {DataInizio}" +
+                $"\nData Restituzione: {DataFine}");
+        }
     }
 }

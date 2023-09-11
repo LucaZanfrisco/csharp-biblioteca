@@ -12,10 +12,10 @@ namespace csharp_biblioteca
         public string Titolo {  get; private set; }
         public int Anno { get; private set; }
         public string Settore { get; private set; }
-        public char Scaffale { get; set; }
+        public string Scaffale { get; set; }
         public string Autore { get; private set; }
 
-        public Documento(string titolo, int anno, string settore, char scaffale, string autore)
+        public Documento(string titolo, int anno, string settore, string scaffale, string autore)
         {
             SetCodice();
             this.Titolo = titolo;
@@ -44,5 +44,15 @@ namespace csharp_biblioteca
             return this.codice;
         }
        
+        public virtual void StampaDocumento()
+        {
+            Console.WriteLine($"Codice: {this.GetCodice()}" +
+                $"\nTitolo: {this.Titolo}" +
+                $"\nAnno: {this.Anno}" +
+                $"\nSettore: {this.Settore}" +
+                $"\nScaffale: {this.Scaffale}" +
+                $"\nAutore: {this.Autore}");
+
+        }
     }
 }

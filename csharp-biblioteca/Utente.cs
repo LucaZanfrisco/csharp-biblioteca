@@ -23,5 +23,13 @@ namespace csharp_biblioteca
             this.Telefono = telefono;
         }
 
+        public void StampaUtente()
+        {
+            Console.WriteLine($"Nome: {Nome}" +
+                $"\nCognome: {Cognome}" +
+                $"\nEmail: {Email}" +
+                $"\nTelefono: {Telefono}");
+        }
+
     }
 }
