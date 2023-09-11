@@ -9,20 +9,20 @@ namespace csharp_biblioteca
     public class Documento
     {
         private string codice;
-        private string titolo;
-        private int anno;
-        private string settore;
-        private char scaffale;
-        private string autore;
+        public string Titolo {  get; private set; }
+        public int Anno { get; private set; }
+        public string Settore { get; private set; }
+        public char Scaffale { get; set; }
+        public string Autore { get; private set; }
 
         public Documento(string titolo, int anno, string settore, char scaffale, string autore)
         {
             SetCodice();
-            SetTitolo(titolo);
-            SetAnno(anno);
-            SetSettore(settore);
-            SetScaffale(scaffale);
-            SetAutore(autore);
+            this.Titolo = titolo;
+            this.Anno = anno;
+            this.Settore = settore;
+            this.Scaffale = scaffale;
+            this.Autore = autore;
         }
 
         // SETTERS
@@ -38,61 +38,11 @@ namespace csharp_biblioteca
             }
         }
 
-        public void SetTitolo(string titolo)
-        {
-            this.titolo = titolo;
-        }
-
-        public void SetAnno(int anno)
-        {
-            this.anno = anno;
-        }
-
-        public void SetSettore(string settore)
-        {
-            this.settore = settore;
-        }
-
-        public void SetScaffale(char scaffale)
-        {
-            this.scaffale = scaffale;
-        }
-
-        public void SetAutore(string autore)
-        {
-            this.autore = autore;
-        }
-
-        // GETTERS
-
+        // GETTERS 
         public string GetCodice()
         {
             return this.codice;
         }
-
-        public string GetTitolo()
-        {
-            return this.titolo;
-        }
-
-        public int GetAnno()
-        {
-            return this.anno;
-        }
-
-        public string GetSettore()
-        {
-            return this.settore;
-        }
-
-        public char GetScaffale()
-        {
-            return this.scaffale;
-        }
-
-        public string GetAutore()
-        {
-            return this.autore;
-        }
+       
     }
 }

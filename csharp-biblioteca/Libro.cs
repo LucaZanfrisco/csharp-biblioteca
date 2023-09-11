@@ -8,7 +8,7 @@ namespace csharp_biblioteca
 {
     public class Libro : Documento
     {
-        public int Pagine { get; set; }
+        public int Pagine { get; private set; }
 
         public Libro(string titolo, int anno, string settore, char scaffale, string autore, int pagine) : base(titolo, anno, settore, scaffale, autore)
         {
