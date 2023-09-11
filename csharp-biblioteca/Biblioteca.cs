@@ -38,13 +38,22 @@ namespace csharp_biblioteca
             documenti.Add(dvd);
         }
 
-        public void AddUtente(string cognome, string nome, string email, string password, int telefono)
+        public void AddUtente(string cognome, string nome, string email, string password, uint telefono)
         {
             utenti.Add(new Utente(cognome, nome, email, password, telefono));
+        }
+
+        public void AddUtente(Utente utente)
+        {
+            utenti.Add(utente);
         }
         public void AddPrestito(string nome, string cognome, int numeroGiorni, Documento documento)
         {
             prestiti.Add(new Prestito(nome, cognome, DateTime.Now, DateTime.Now.AddDays(numeroGiorni), documento));
+        }
+        public void AddPrestito(Prestito prestito)
+        {
+            prestiti.Add(prestito);
         }
 
         public Documento CercaDocumento(string codice, string titolo)
@@ -79,7 +88,8 @@ namespace csharp_biblioteca
                                     $"\nAnno: {elemento.Anno}" +
                                     $"\nSettore: {elemento.Settore}" +
                                     $"\nScaffale: {elemento.Scaffale}" +
-                                    $"\nAutore: {elemento.Autore}");
+                                    $"\nAutore: {elemento.Autore}" +
+                                    $"\n----------------------------\n");
 
 
             }
@@ -91,7 +101,8 @@ namespace csharp_biblioteca
                 Console.WriteLine($"Nome: {elemento.Nome}" +
                 $"\nCognome: {elemento.Cognome}" +
                 $"\nEmail: {elemento.Email}" +
-                $"\nTelefono: {elemento.Telefono}");
+                $"\nTelefono: {elemento.Telefono}" +
+                $"\n-----------------------------\n");
             }
         }
         public void StampaListaPrestiti()

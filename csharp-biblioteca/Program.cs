@@ -37,3 +37,36 @@ biblioteca.AddLibro(alice);
 biblioteca.AddDvd(beatles);
 
 biblioteca.StampaListaDocumenti();
+
+Utente utente1 = new Utente("cognome1", "nome1", "tizio1@gmail.com", "123456789", 3412331309);
+Utente utente2 = new Utente("cognome2", "nome2", "tizio2@gmail.com", "123456789", 3412331309);
+Utente utente3 = new Utente("cognome3", "nome3", "tizio3@gmail.com", "123456789", 3412331309);
+Utente utente4 = new Utente("cognome4", "nome4", "tizio4@gmail.com", "123456789", 3412331309);
+
+biblioteca.AddUtente(utente1);
+biblioteca.AddUtente(utente2);
+biblioteca.AddUtente(utente3);
+biblioteca.AddUtente(utente4);
+
+biblioteca.AddPrestito("nome1", "cognome1", 40, theWitcher);
+
+biblioteca.StampaListaUtenti();
+
+Console.WriteLine("Inserire nome da cercare nella lista prestiti: ");
+string nomePrestito = Console.ReadLine();
+
+Console.WriteLine("Inserire il cognome da cercare nella lista prestiti: ");
+string cognomePrestito = Console.ReadLine();
+
+Prestito prestito = biblioteca.CercaPrestiti(nomePrestito,cognomePrestito);
+
+if(prestito != null)
+{
+    prestito.StampaPrestito();
+}
+else
+{
+    Console.WriteLine("Nessun Prestito Trovato");
+}
+
+

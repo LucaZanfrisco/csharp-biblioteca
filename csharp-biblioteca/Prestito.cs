@@ -25,10 +25,13 @@ namespace csharp_biblioteca
 
         public void StampaPrestito()
         {
-            Console.WriteLine($"Nome: {Nome}" +
+            Console.WriteLine($"\nNome: {Nome}" +
                 $"\nCognome: {Cognome}" +
                 $"\nData Noleggio: {DataInizio}" +
-                $"\nData Restituzione: {DataFine}");
+                $"\nData Restituzione: {DataFine}" +
+                $"\n---------------------------\n");
+            Console.WriteLine("Documento:");
+            documento.StampaDocumento();
         }
     }
 }
